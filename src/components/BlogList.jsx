@@ -65,7 +65,7 @@ const BlogList = () => {
                         className={styles.blogList_desc}
                         onClick={() => {
                           selectCount(data.id);
-                          // navigate(`/single-blog/${data.id}`);
+                          navigate(`/single-blog/${data.id}`);
                         }}
                       >
                         <h5>{data.Title}</h5>

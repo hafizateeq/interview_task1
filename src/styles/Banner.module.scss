@@ -1,0 +1,53 @@
+@import "variables";
+@import "mixins";
+
+.banner_back{
+  background-image: url("../images/bannerImg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  @include display-flex(center,center, row);
+
+  h1{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    @include display-flex(center,center, row);
+
+  }
+}
+
+.banner_desc{
+  background-color: $blackColor !important;
+  height: 70vh;
+  color: #fff;
+  @include display-flex(none, center, column);
+  padding: 0px 60px;
+  box-sizing: border-box;
+
+  h4{
+    line-height: 56px;
+  }
+  p{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+}
+@media only screen and (max-width: 999px) {
+  .banner_desc{
+    p{
+      font-size: 16px;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .banner_back{
+    height: 50vh;
+  }
+  .banner_desc{
+    padding: 0 40px;
+    height: 60vh;
+  }
+}
